@@ -1,0 +1,44 @@
+/* 通配符选择器 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    /* 弹性布局 */
+    display: flex;
+    /* 定义main axis的方向 沿块向从页面上侧延伸到下侧*/
+    /* 交叉轴默认就为横向 */
+    flex-direction: column;
+    /* 设置在主轴的对齐方向 */
+    justify-content: center;
+    /* 交叉轴的对齐方向 */
+    align-items: center;
+
+    height: 100vh;
+    background: url(bg.png) no-repeat;
+    /* 确保完全覆盖，多出部分被裁切 */
+    background-size: cover;
+}
+
+.box {
+    /* 定义元素圆角 */
+    /* https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius */
+    /* 设置圆角长度为20px */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 380px;
+    /* rgba还可以设置不透明度0.5 */
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: ;
+}
