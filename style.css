@@ -8,6 +8,7 @@
 
 body {
     /* 弹性布局 */
+    /*布局详解 -- https://zhuanlan.zhihu.com/p/648802811 */
     display: flex;
     /* 定义main axis的方向 沿块向从页面上侧延伸到下侧*/
     /* 交叉轴默认就为横向 */
@@ -40,5 +41,59 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 
-    backdrop-filter: ;
+    /* backdrop-filter 为一个元素后面区域添加图形效果（如模糊或颜色偏移）为了看到效果，必须使元素或其背景至少部分透明。 */
+    backdrop-filter: blur(10px);
+    margin-bottom: 20px;
 }
+
+/* 子元素选择器，只选择相邻一级的子元素 */
+.box > h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+/* 后代选择器，选择box的所有后代 */
+.box .input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 定义在横向，元素从左边开始对齐 */
+    align-items: start;
+    /* 定义组件到下一元素的距离 */
+    margin-bottom: 10px;
+}
+
+.box .input-box > label {
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+}
+
+/* 设置账户密码输入框中的透明 */
+.box .input-box > input {
+    /* 确保在计算宽高时，将要将边框和内边距算入 */
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    height: 35px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    /* 指定 HTML 元素从一种状态到另一种状态所需要的过渡时间 */
+    transition: 0.2s;
+    /* 清除掉了焦点轮廓 */
+    outline: none;
+    /* 用于设置内边距，语句表示顶底没有内边距，左右两侧有10px */
+    padding: 0 10px;
+    /* 设置字符边距 */
+    letter-spacing: 1px;
+}
+
+
+.box .input-box > input:focus {
+    /* 设置获得焦点后的边框颜色变化 */
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
