@@ -2,14 +2,34 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
-        <title>Sign in Page</title>
+        <title> 登陆页面 </title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <!-- 弹性布局 -->
     <!-- https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout -->
     <body>
+        <div class="box">
+            <h2> 登陆 </h2>
+            <div class="input-box">
+                <!-- for="" 后面跟一个id，表示点击此标签的时候，会自动跳转到相应表单控件，或者全放在<label></label>下 -->
+                <label for="accounts">账号</label>
+                <input type="text" id="accounts">
+            </div>
+            <div class="input-box">
+                <label for="password">密码</label>
+                <input type="password" id="password">
+            </div>
+        </div>
 
+        <div style="display: flex; flex-direction: row; justify-content: center; height: 90vh">
+            <div style="background-color: aqua; width: 40vh; text-align: center;">
+                40%
+            </div>
+            <div style="background-color: bisque; width: 60vh; text-align: center;">
+                60%
+            </div>
+        </div>
     </body>
 
 </html>
