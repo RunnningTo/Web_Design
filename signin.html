@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <title> 注册账号 </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/windows.css">
+        <script type="text/javascript" src="./script/login.js"></script>
+        <script type="text/javascript" src="./script/windows.js"></script>
+    </head>
+
+    <body>
+        <div class="box">
+            <h1> 注册你的新账号 </h1>
+            <div class="input-box" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 10px; ">
+                <label for="accounts" style="display: flex;">输入你的账号</label>
+                <input type="text" id="newAccount">
+            </div>
+            <div class="input-box" style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin-bottom: 10px;">
+                <label for="password">输入你的密码</label>
+                <input type="password" id="newPassword">
+            </div>
+            <div class="btn-box" style="align-items:center">
+                <div>
+                    <button onclick="addAccount(newAccount.value, newPassword.value)">提交</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="overlay">
+            <div id="popup">
+                <h2>账户已存在</h2>
+                <p>请输入新账户或返回页面点击找回密码</p>
+                <button id="close" onclick="closePopup()">关闭弹窗</button>
+            </div>
+        </div>
+
+    </body>
+</html>

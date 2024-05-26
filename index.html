@@ -4,13 +4,29 @@
         <meta charset="utf-8">
         <title> 登陆页面 </title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/windows.css">
+        <script type="text/javascript" src="./script/login.js"></script>
+        <script type="text/javascript" src="./script/windows.js"></script>
+
+        <style type="text/css"> 
+            h1.headline {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                color: #f5f5f5;
+                margin-bottom: 20px;
+                padding: 20px;
+                font-size: 90px;
+                text-shadow: 0 5px 5px #51a0d0;
+            }
+        </style>
     </head>
 
     <!-- 弹性布局 -->
     <!-- https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout -->
     <body>
+        <h1 class="headline">ChatVerse</h1>
         <div class="box">
-            <h2> 登陆 </h2>
+            <h1> Login </h1>
             <div class="input-box">
                 <!-- for="" 后面跟一个id，表示点击此标签的时候，会自动跳转到相应表单控件，或者全放在<label></label>下 -->
                 <label for="accounts">账号</label>
@@ -18,9 +34,29 @@
             </div>
             <div class="input-box">
                 <label for="password">密码</label>
-                <input type="password" id="password">
+                <input type="password" id="passwordBtn">
+            </div>
+            <div class="btn-box">
+                <a href="refind.html">忘记密码？</a>
+                <div>
+                    <button onclick="loginAction(accounts.value, passwordBtn.value)">登陆</button>
+                    <button onclick="window.open('signin.html','_self')">注册</button>
+                </div>
             </div>
         </div>
-    </body>
 
+        <div id="overlay">
+            <div id="popup">
+                <h2>密码错误</h2>
+                <p>请再次输入密码或点击忘记密码</p>
+                <button id="close" onclick="closePopup()">关闭弹窗</button>
+            </div>
+        </div>
+
+        <div class="index-footer">
+            <a href="about.html" target="_blank">关于这个网页</a>
+            <p> @202230224028 </p>
+        </div>
+
+    </body>
 </html>
