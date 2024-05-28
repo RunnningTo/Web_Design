@@ -18,9 +18,11 @@ body {
     align-items: center;
 
     height: 100vh;
-    background: url(./img/loginBg1.png) no-repeat;
+    /* background: url(./img/loginBg1.png) no-repeat; */
+    background-image: url(./img/bg-2.png);
     /* 确保完全覆盖，多出部分被裁切 */
-    background-size: cover;
+    /* background-size: cover; */
+    background-color: #efefef;
 }
 
 .box {
@@ -37,21 +39,24 @@ body {
     height: 380px;
     /* height: 45vh; */
     /* rgba还可以设置不透明度0.5 */
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-left: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-
+    border-top: 1px solid rgba(200, 200, 200, 0.5);
+    border-left: 1px solid rgba(200, 200, 200, 0.5);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+    border-right: 1px solid rgba(200, 200, 200, 0.2);
+    background-color: rgba(230, 230, 230, 0.5);
     /* backdrop-filter 为一个元素后面区域添加图形效果（如模糊或颜色偏移）为了看到效果，必须使元素或其背景至少部分透明。 */
+    /* backdrop-filter: blur(10px); */
     backdrop-filter: blur(10px);
     margin-bottom: 20px;
 }
 
 /* 子元素选择器，只选择相邻一级的子元素 */
 .box > h1 {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 0.9);
     margin-bottom: 20px;
     text-shadow: 0 2px 4px #9196a1;
+    /* text-shadow: 0 5px 5px #51a0d0; */
+    font-size: 50px;
 }
 
 /* 后代选择器，选择box的所有后代 */
@@ -67,7 +72,8 @@ body {
 
 .box .input-box > label {
     margin-bottom: 5px;
-    color: rgba(255, 255, 255, 0.9);
+    /* color: rgba(255, 255, 255, 0.9); */
+    color: rgba(100, 100, 100, 0.9);
     font-size: 13px;
 }
 
@@ -75,12 +81,17 @@ body {
 .box .input-box > input {
     /* 确保在计算宽高时，将要将边框和内边距算入 */
     box-sizing: border-box;
-    color: rgba(255, 255, 255, 0.9);
     font-size: 14px;
     height: 35px;
     width: 250px;
-    background: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5); */
+
+    color: rgba(150, 150, 150, 0.9);
+    background: rgba(200, 200, 200, 0.9);
+    border: 1px solid rgba(200, 200, 200, 0.5); 
+
     border-radius: 5px;
 
     /* 指定 HTML 元素从一种状态到另一种状态所需要的过渡时间 */
@@ -93,16 +104,14 @@ body {
     letter-spacing: 1px;
 }
 
-
-.box .input-box > input:focus {
-    /* 设置获得焦点后的边框颜色变化 */
-    border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
 /* 设置box的所有后代的input-box的一级子代input获得焦点时的行为 */
 .box .input-box > input:focus {
-    border: 1px solid rgba(255 , 255, 255, 0.8);
+    /* 设置获得焦点后的边框颜色变化 */
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+    border: 1px solid rgba(200, 200, 200, 0.8);
 }
+
+
 
 .box .btn-box {
     width: 250px;
@@ -116,7 +125,7 @@ body {
     font-size: 14px;
     /* 去除连接下划线 */
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 123, 255, 0.7);
     transition: 0.2s;
     width: 250px;
     text-align: end;
@@ -124,7 +133,7 @@ body {
 
 /* 定义链接悬浮时的变化 */
 .box .btn-box > a:hover {
-    color: rgba(255, 255, 0, 0.8);
+    color: rgba(0, 123, 255, 0.9);
 }
 
 .box .btn-box > div {
@@ -138,11 +147,12 @@ body {
 .box .btn-box > div > button {
     width: 120px;
     height: 35px;
-    border: 1px solid rgba(197, 81, 58, 0.8);
-    background: rgba(197, 81, 58, 0.8);
+    border: 1px solid rgba(0, 123, 255, 0.8);
+    background: rgba(0, 123, 255, 0.8);
     color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 /* 第二个button */
@@ -151,8 +161,8 @@ body {
 }
 
 .box .btn-box > div > button:hover {
-    border: 1px solid rgba(248, 108, 76, 0.8);
-    background: rgba(248, 108, 76, 0.5);
+    border: 1px solid rgba(13, 95, 183, 0.8);
+    background: rgba(13, 95, 183, 0.8);
 }
 
 .index-footer {

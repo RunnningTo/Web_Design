@@ -7,25 +7,33 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     /* min-height属性设置元素的最小高度。
     100vh表示100%的视口高度（viewport height）。视口是浏览器中用于显示网页的那部分区域，不包括滚动条。
     min-height: 100vh;意味着元素的高度至少会占满整个视口的高度，即使内容不足以填满该空间。 */
-    min-height: 100vh;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
-    background: linear-gradient(#009688 0%,#009688 130px,#d9dbd5 130px,#d9dbd5 100%)
+    /* background: linear-gradient(#009688 0%,#009688 130px,#d9dbd5 130px,#d9dbd5 100%) */
+    background-color: #f1f7fe;
 }
 
-.container {
+.float {
+    height: 93vh;
+    padding: 35px 200px;
+}
+
+.chat-container {
     /* 相对定位,不会影响其他元素的布局,元素会根据其正常位置进行偏移 */
     display: flex;
     position: relative;
-    width: 100vh;
+    width: 100%;
     max-width: 100%;
-    height: calc( 100vh - 40px);
+    /* height: calc( 100vh - 40px); */
+    height: 100%;
     background:#fff;
+    border-radius: 20px;
     /* CSS中的box-shadow属性用于在元素的框架上添加阴影效果，增加页面的视觉深度和层次感。这个属性接受一个或多个阴影值，每个值由以下几个部分组成：
 
     X轴偏移 (0)：第一个值表示阴影在水平方向（X轴）的偏移距离，正值向右偏移，负值向左偏移。
@@ -38,7 +46,7 @@ body {
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
 /* 占到30%的空间 */
-.container .leftSide
+.chat-container .leftSide
 {
     position: relative;
     flex:30%;
@@ -46,14 +54,17 @@ body {
     border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.container .rightside
+.chat-container .rightSide
 {
     position: relative;
-    flex: 70%;
-    background:#e5ddd5;
+    flex: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
 }
 
-.container .rightside::before {
+.chat-container .rightSide::before {
     content: '';
     position: absolute;
     top: 0;
@@ -70,10 +81,45 @@ body {
     height: 60px;
     background: #ededed;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
+.chat-box {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* top right bottom left */
+    padding: 0 50px;
+    /* overflow-y: auto; */
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+/* 定义滚动条的宽度 */
+.chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* 设置滚动条轨道的样式 */
+.chat-box::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* 自定义滚动条的拇指部分 */
+.chat-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+/* 改变滚动条拇指悬停时的样式 */
+.chat-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 .userimg {
     position: relative;
@@ -87,11 +133,14 @@ body {
 }
 
 .cover {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    left: 0; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* width: 100%;
+    height: 100%; */
     /* 填充容器,如果容器的宽高比与元素的宽高比不匹配，元素的某些部分将会被裁剪,但元素中最重要的部分（通常是中心或焦点区域）会尽量保持可见。 */
     object-fit: cover;
 }
@@ -136,4 +185,220 @@ body {
     padding-left: 40px;
 }
 
+/* 设置div input中的placeholder占位符的格式 */
+.search_chat div input::placeholder {
+    color: #bbb;
+}
 
+.search_chat div img {
+    position: absolute;
+    left: 30px;
+    top: 14px;
+    font-size: 1.5em;
+}
+
+.chatlist
+{
+    position: relative;
+    height: calc(100%-110px);
+    overflow-y: auto;
+}
+.chatlist .block
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.chatlist .block.active{
+    background: #ebebeb;
+}
+
+.chatlist .block:hover {
+    background:#f5f5f5;
+}
+.chatlist .block .imgbx {
+    position: relative;
+    min-width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.chatlist .block .details {
+    position: relative;
+    width: 100%;
+}
+.chatlist .block .details .listHead {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.chatlist .block .details .listHead h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #111;
+}
+.chatlist .block .details .listHead .time {
+    font-size: 0.75em;
+    color: #aaa;
+}
+.chatlist .block .details .listHead .time {
+    color: #111;
+}
+
+
+.message_p
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message_p p
+{
+    color: #aaa;
+    display: -webkit-box;
+    -webkit-line-break: 1;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.message_p b
+{
+    background-color: red;
+    color: #fff;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+.imgText
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%;
+    max-height: 100%; */
+}
+.imgText h4
+{
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-left: 15px;
+}
+.imgText h4 span
+{
+    font-size: 0.8em;
+    color: #555;
+}
+
+.chat-message
+{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.chat-message p
+{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 20px;
+    /* background: #dcf8c6; */
+    background: #2f80ec;
+    border-radius: 10px;
+    /* font-size: 0.9em; */
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 用于绘画一个装饰性的表示信息发送方的箭头 */
+.chat-message p::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    /* background: linear-gradient(135deg,#dcf8c6 0%,#dcf8c6 50%,transparent 50%,transparent); */
+    background: linear-gradient(135deg,#2f80ec 0%,#2f80ec 50%,transparent 50%,transparent);
+}
+
+.chat-message p span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.5;
+}
+
+.my_message{
+    justify-content: flex-end;
+    color: #fff;
+}
+.frnd_message{
+    justify-content: flex-start;
+}
+.frnd_message p{
+    background: #fff;
+    text-align: left;
+}
+.chat-message.frnd_message p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -12px;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(225deg,#fff 0%,#fff 50%,transparent 50%,transparent);
+}
+.chatbox-input
+{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    background: #f0f0f0;
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.chatbox-input input
+{
+    position: relative;
+    flex-grow: 1;
+    margin: 0 20px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1em;
+}
+
+.chatbox-input button {
+    position: relative;
+    padding: 5px 10px;
+    background-color: #428bca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbox-input button:hover {
+    background-color: #0b4c84;
+}

@@ -1,0 +1,267 @@
+.main-wrapper {
+    width: 100%;
+    /* width: calc(var(--vh,1vh) * 100); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-wrapper .navigation {
+    background: #f1f7fe;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; */
+}
+
+.main-wrapper .navigation .nav-content {
+    height: 10%;
+    background: #2f80ec
+}
+
+.main-wrapper .navigation .nav-content {
+    border-radius: 0 10px 10px 0
+}
+
+.main-wrapper .navigation .nav-content ul {
+    padding: 0;
+    margin: 0
+}
+
+.main-wrapper .navigation .nav-content ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.main-wrapper .navigation .nav-content ul li.flex-lg-brackets {
+    flex: 1
+}
+
+.main-wrapper .navigation .nav-content ul li.logo {
+    list-style-image: none;
+    list-style-type: none
+}
+
+.main-wrapper .navigation .nav-content ul li.logo a {
+    line-height: 75px;
+    width: 75px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.main-wrapper .navigation .nav-content ul li.logo a img {
+    position: relative;
+    left: -4px
+}
+
+.main-wrapper .navigation .nav-content ul li:not(.logo) {
+    list-style-image: none;
+    list-style-type: none;
+    margin: 4px 20px
+}
+
+.main-wrapper .navigation .nav-content ul li:not(.logo) a {
+    display: block;
+    text-align: left;
+    padding: 15px 20px;
+    position: relative
+}
+
+.main-wrapper .navigation .nav-content ul li:not(.logo) a i {
+    font-size: 20px;
+    color: #fff;
+    top: 3px;
+    position: relative
+}
+
+.main-wrapper .navigation .nav-content ul li:not(.logo) a .circle-icon {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    padding: 0;
+    border-radius: 7px;
+    position: absolute;
+    top: 7px;
+    right: 10px
+}
+
+.main-wrapper .navigation .nav-content ul li.brackets {
+    flex: 1
+}
+
+.main-wrapper .navigation .nav-content ul li>a.active {
+    background-color: #1a73e9;
+    border-radius: 7px
+}
+
+.container {
+    /* height: 100%; */
+    padding-top: 15px;    
+    padding-bottom: 15px;
+    margin-top: auto;
+    margin-bottom: auto; 
+    max-height: 7vh;
+}
+
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline
+}
+
+a:not([href]) {
+    color: inherit;
+    text-decoration: none
+}
+
+a:not([href]):hover {
+    color: inherit;
+    text-decoration: none
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.p-0 {
+    padding: 0!important
+}
+
+.pt-0,.py-0 {
+    padding-top: 0!important
+}
+
+.pr-0,.px-0 {
+    padding-right: 0!important
+}
+
+.pb-0,.py-0 {
+    padding-bottom: 0!important
+}
+
+.pl-0,.px-0 {
+    padding-left: 0!important
+}
+
+.p-1 {
+    padding: .25rem!important
+}
+
+.pt-1,.py-1 {
+    padding-top: .25rem!important
+}
+
+.pr-1,.px-1 {
+    padding-right: .25rem!important
+}
+
+.pb-1,.py-1 {
+    padding-bottom: .25rem!important
+}
+
+.pl-1,.px-1 {
+    padding-left: .25rem!important
+}
+
+.p-2 {
+    padding: .5rem!important
+}
+
+.pt-2,.py-2 {
+    padding-top: .5rem!important
+}
+
+.pr-2,.px-2 {
+    padding-right: .5rem!important
+}
+
+.pb-2,.py-2 {
+    padding-bottom: .5rem!important
+}
+
+.pl-2,.px-2 {
+    padding-left: .5rem!important
+}
+
+.p-3 {
+    padding: 1rem!important
+}
+
+.pt-3,.py-3 {
+    padding-top: 1rem!important
+}
+
+.pr-3,.px-3 {
+    padding-right: 1rem!important
+}
+
+.pb-3,.py-3 {
+    padding-bottom: 1rem!important
+}
+
+.pl-3,.px-3 {
+    padding-left: 1rem!important
+}
+
+.p-4 {
+    padding: 1.5rem!important
+}
+
+.pt-4,.py-4 {
+    padding-top: 1.5rem!important
+}
+
+.pr-4,.px-4 {
+    padding-right: 1.5rem!important
+}
+
+.pb-4,.py-4 {
+    padding-bottom: 1.5rem!important
+}
+
+.pl-4,.px-4 {
+    padding-left: 1.5rem!important
+}
+
+.p-5 {
+    padding: 3rem!important
+}
+
+.pt-5,.py-5 {
+    padding-top: 3rem!important
+}
+
+.pr-5,.px-5 {
+    padding-right: 3rem!important
+}
+
+.pb-5,.py-5 {
+    padding-bottom: 3rem!important
+}
+
+.pl-5,.px-5 {
+    padding-left: 3rem!important
+}
