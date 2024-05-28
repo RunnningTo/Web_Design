@@ -20,16 +20,16 @@ body {
 }
 
 .float {
+    display: none;
     height: 93vh;
-    padding: 35px 200px;
+    padding: 35px 0;
 }
 
 .chat-container {
     /* 相对定位,不会影响其他元素的布局,元素会根据其正常位置进行偏移 */
     display: flex;
-    position: relative;
+    position: absolute;
     width: 100%;
-    max-width: 100%;
     /* height: calc( 100vh - 40px); */
     height: 100%;
     background:#fff;
@@ -83,7 +83,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 15px;
+    /* padding: 0 15px; */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -93,6 +93,7 @@ body {
     /* height: 100%; */
     /* top right bottom left */
     padding: 0 50px;
+    /* padding: 0 90px; */
     /* overflow-y: auto; */
     flex-grow: 1;
     overflow-y: auto;
@@ -373,7 +374,7 @@ body {
     width: 100%;
     margin-top: auto;
     background: #f0f0f0;
-    padding: 15px;
+    padding: 15px 70px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }

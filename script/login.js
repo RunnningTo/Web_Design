@@ -20,7 +20,7 @@ function loginAction(user, passwd) {
     let passwd1 = localStorage.getItem(user);
     console.log(passwd1);
     if(passwd == passwd1) {
-        window.open('./chat/chatpage.html','_self');
+        window.open('./chat/chatpage_card.html','_self');
     } else {
         passwordBtn.value="";
         openPopup();

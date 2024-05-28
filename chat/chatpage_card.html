@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ChatVerse</title>
+        <link rel="stylesheet" type="text/css" href="../css/chat.css">
+        <link rel="stylesheet" type="text/css" href="../css/nav.css">
+        <link rel="stylesheet" type="text/css" href="../css/themify-icons.css">
+        <link rel="stylesheet" type="text/css" href="../css/slider_card.css">
+        <link rel="stylesheet" type="text/css" href="../css/intro.css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <!-- 导航栏 -->
+            <nav class="navigation">
+                <div class="container pt-0 pb-0">
+                    <div class="nav-content">
+                        <ul>
+                            <li class="logo d-none d-xl-block"><a href="#"><img src="../img/remove.png" alt="logo" style="max-width: 100%;
+                                height: auto;
+                                display: block;"></a></li>
+                            <li><a href="#" class="active nav-content-bttn" data-tab="chats"><span class="circle-icon bg-warning"></span><i class="ti-comments"></i></a></li>
+                            <li><a href="#" class="nav-content-bttn" data-tab="friends"><span class="circle-icon bg-danger"></span><i class="ti-user"></i></a></li>
+                            <li><a href="#" class="nav-content-bttn" data-tab="favorites"><i class="ti-heart"></i></a></li>
+                            <li class="flex-lg-brackets"><a href="#" data-tab="archived" class="nav-content-bttn"><i class="ti-archive"></i></a></li>
+                            <li class="d-none d-xl-block d-lg-block night-mode"><a href="../index.html"><i class="ti-flickr-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+                <div class="swiper-list-card swiper-list active" id="chats">
+                    <!-- 动态放置对话容器 -->
+                    <div class="swiper-main-card swiper-main"></div>
+                    <div id="prev-card" class="btn leftBtn"></div>
+                    <div id="next-card" class="btn rightBtn"></div>
+                    <!-- <img id="prev-card" class="btn leftBtn" src="../img/left.png" alt="">
+                    <img id="next-card" class="btn rightBtn" src="../img/right.png" alt=""> -->
+                </div>                
+                <div class="swiper-list-card swiper-list" id="friends">
+                    <div class="container_intro">
+                        <div class="profile">
+                            <img src="../img/profile/user.png" alt="头像">
+                            <h1>Sober_Dreamer</h1>
+                            <div class="social-links">
+                                <a href="mailto:202230224028@hunnu.edu.cn" target="_blank">Mail</a>
+                                <a href="#" target="_blank">Google</a>
+                                <a href="https://github.com/RunnningTo" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="bio">
+                            <p>对编程充满热情。喜欢学习新技术，乐于解决问题。擅长前端开发，熟练掌握HTML、CSS和JavaScript等技术。在业余时间喜欢阅读技术文章，提升自己的技术能力。</p>
+                            <p>欢迎来到我的个人主页，希望能够与你分享我的学习心得和技术经验。如果你对我感兴趣，可以通过邮箱联系我，我会尽快回复你的邮件。</p>
+                        </div>
+                        <div class="skills">
+                            <h2>Skill</h2>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>Java</li>
+                                <li>C++</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-list-card swiper-list" id="favorites">
+                    <div class="swiper-main-card swiper-main"></div>
+                    <div id="prev-img-card" class="btn leftBtn"></div>
+                    <div id="next-img-card" class="btn rightBtn"></div>
+                </div>
+                <div class="swiper-list-card swiper-list" id="archived">
+                    <div class="swiper-main-card swiper-main"></div>
+                </div>
+        </div>
+        <script src="../script/chat.js"></script>
+        <script src="../script/slider_card.js"></script>
+        <script src="../script/nav.js"></script>
+        <script>
+            let imgArr = [{
+                imgPath: '../img/profile/user1.jpg',
+                name: 'CyberStorm',
+                status: '在线',
+                chat: `
+                        <div class="chat-message my_message">
+                            <p>你在干嘛呢？<br><span>10:15</span> </p>
+                        </div>
+                        <div class="chat-message frnd_message">
+                            <p>在写作业<br><span>10:15</span> </p>
+                        </div>
+                        <div class="chat-message frnd_message">
+                            <p>天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了<br><span>10:15 </span> </p>
+                        </div>
+                        <div class="chat-message my_message">
+                            <p>对啊 也不下雨<br><span>10:15</span> </p>
+                        </div>
+                        <div class="chat-message my_message">
+                            <p>希望以后凉快点<br><span>10:15</span> </p>
+                        </div>
+                    `
+            },
+            {
+                imgPath: '../img/profile/user2.jpg',
+                name: 'EternalDreamer',
+                status: '在线',
+                chat: `
+                    <div class="chat-message frnd_message">
+                        <p>今天学了什么新知识？<br><span>12:30</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>我在学习编程，学了一些新的算法。<br><span>12:31</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>有点难，不过很有趣。<br><span>12:35</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>确实是这样，慢慢来，都会学会的。<br><span>12:36</span> </p>
+                    </div>
+                `
+            },
+            {
+                imgPath: '../img/profile/user3.jpg',
+                name: 'EchoRider',
+                status: '在线',
+                chat: `
+                    <div class="chat-message frnd_message">
+                        <p>午饭吃了什么？<br><span>11:20</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>尝试了一家新的日料店，寿司很好吃。<br><span>11:22</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>听起来不错，有推荐的菜吗？<br><span>11:25</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>鳗鱼饭和刺身拼盘都很棒，推荐尝试。<br><span>11:26</span> </p>
+                    </div>
+                `
+            },
+            {
+                imgPath: '../img/profile/user4.jpg',
+                name: 'NeonNinja',
+                status: '在线',
+                chat: `
+                    <div class="chat-message frnd_message">
+                        <p>有计划去哪里旅游吗？<br><span>16:00</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>打算去日本，一直很想去看看樱花。<br><span>16:02</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>听说京都的樱花很美，一定要去看看！<br><span>16:05</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>是啊，还想去奈良看看小鹿。<br><span>16:07</span> </p>
+                    </div>
+                `
+            },
+            {
+                imgPath: '../img/profile/user5.jpg',
+                name: 'MysticPhoenix',
+                status: '在线',
+                chat: `
+                    <div class="chat-message frnd_message">
+                        <p>最近在玩什么新玩具吗？<br><span>18:30</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>买了一套乐高，正在拼装，很有趣。<br><span>18:32</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>乐高确实不错，可以花很多时间。<br><span>18:35</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>是的，很享受拼装的过程。<br><span>18:37</span> </p>
+                    </div>
+                `
+            }];
+
+
+            /**
+            * obj: 
+            * imgArr 图片数组
+            * imgWidth 图片宽度
+            * aniTime 动画切换时间
+            * intervalTime 停留的时间
+            * scale 图片缩放
+            * autoplay 是否自动播放
+            * gap 图片之间间隔
+            */
+            new Swiper({
+                imgArr: imgArr, 
+                imgWidth: 1500, 
+                aniTime: 1000, 
+                intervalTime: 1500, 
+                scale: 1, 
+                autoplay: false,
+                gap: 50,
+                clsSuffix: '-card'
+            }).init();
+
+
+            let imgArr1 = [
+                "../img/picture/empower_your_entire_workforce_with_enterprise_grade_ai.webp",
+                "../img/picture/enterprise.webp",
+                "../img/picture/ChatGPT_Charts_Blog_Hero.webp",
+                "../img/picture/ChatGPT_Carousel1.webp",
+                "../img/picture/practices-for-governing-agentic-ai-systems.webp",
+                "../img/picture/the-latest-milestone-in-openai-s-effort-in-scalling-up-deep-learning.webp",
+                "../img/picture/integrate_models_into_products_tools_or_operations.webp",
+                "../img/picture/let-your-imagination-run-wild.webp"
+            ];
+
+            new Swiper_Img({
+                imgArr: imgArr1, 
+                imgWidth: 450, 
+                aniTime: 1000, 
+                intervalTime: 1500, 
+                scale: 1, 
+                autoplay: false,
+                gap: 50,
+                clsSuffix: '-card'
+            }).init();
+
+        </script>
+    </body>
+</html>
+

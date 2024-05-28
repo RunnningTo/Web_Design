@@ -1,0 +1,75 @@
+.swiper-list-card .container_intro {
+    /* max-width: 800px; */
+    /* width: ; */
+    /* height: 93vh; */
+    width: 75%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_intro h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+.container_intro p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.container_intro .highlight {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Additional styles */
+.container_intro .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container_intro .profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #007bff;
+}
+
+.container_intro .social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container_intro .social-links a {
+    color: #007bff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.container_intro .bio {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.container_intro .skills {
+    margin-top: 20px;
+}
+
+.container_intro .skills ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container_intro .skills li {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    border-radius: 5px;
+}

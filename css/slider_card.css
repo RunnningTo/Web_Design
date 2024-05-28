@@ -1,0 +1,41 @@
+.swiper-list{
+    display: none;
+    height: 93vh;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #eee;
+    padding: 35px 0;
+}
+
+.swiper-list-card.active {
+    display: block;
+}
+
+.swiper-main{
+    height: 100%;
+    position: relative;
+}
+.swiper-main > img{
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 10%;
+    border-radius: 4px;
+    display: inline-block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.swiper-list .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* width: 30px; */
+    height: 100%;
+    z-index: 1002;
+    cursor: pointer;
+}
+.leftBtn{
+    left: 0px;
+}
+.rightBtn{
+    right: 0px;
+}
