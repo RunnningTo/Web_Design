@@ -1,0 +1,53 @@
+/* 弹窗样式 */
+#overlay {
+    /* position: fixed; 是一个定位属性值，它将元素的位置固定在浏览器窗口（即视口）的某个位置。使用 fixed 定位的元素会相对于浏览器窗口进行定位，即使滚动页面，元素也会停留在指定的位置。 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    z-index: 10000; /* 确保遮罩层在最顶层 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+}
+
+#popup {
+    position: fixed;
+    /* 相对于外部元素底部的50% */
+    top: 50%; /* 将弹窗的顶部定位在浏览器窗口垂直中心 */
+    /* 相对外部元素的左边缘的50% */
+    left: 50%; /* 将弹窗的左侧定位在浏览器窗口水平中心 */
+    transform: translate(-50%, -50%); /* 使用 transform 属性将弹窗的中心对齐到浏览器窗口的中心 */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+}
+
+#popup h2 {
+    color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 20px;
+}
+
+#popup p {
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+}
+
+#popup button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#popup button:hover {
+    background-color: #007bff;
+    color: white;
+}

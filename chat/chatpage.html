@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>ChatVerse</title>
+        <link rel="stylesheet" type="text/css" href="../css/chat.css">
+        <link rel="stylesheet" type="text/css" href="../css/nav.css">
+        <link rel="stylesheet" type="text/css" href="../css/themify-icons.css">
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <!-- 导航栏 -->
+            <nav class="navigation">
+                <div class="container pt-0 pb-0">
+                    <div class="nav-content">
+                        <ul>
+                            <li class="logo d-none d-xl-block"><a href="#"><img src="../img/remove.png" alt="logo" style="max-width: 100%;
+                                height: auto;
+                                display: block;"></a></li>
+                            <li><a href="#" class="active nav-content-bttn" data-tab="chats"><span class="circle-icon bg-warning"></span><i class="ti-comments"></i></a></li>
+                            <li><a href="#" class="nav-content-bttn" data-tab="friends"><span class="circle-icon bg-danger"></span><i class="ti-user"></i></a></li>
+                            <li><a href="#" class="nav-content-bttn" data-tab="favorites"><i class="ti-heart"></i></a></li>
+                            <li class="flex-lg-brackets"><a href="#" data-tab="archived" class="nav-content-bttn"><i class="ti-archive"></i></a></li>
+                            <li class="d-none d-xl-block d-lg-block night-mode"><a href="#"><i class="ti-flickr-alt"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="float">
+                <div class="chat-container">
+                    <!-- <div class=""leftSide">
+                        左边头部头像框多选框
+                        <div class="header">
+                            <div class="userimg">
+                                <img src="../img/userimg.png" class="cover">
+                            </div>
+                            <ul class="nav_icons">
+                                <li><img src=""></li>
+                                <li><img src=""></li>
+                            </ul>
+                        </div>
+                        搜索栏
+                        <div class="search_chat">
+                            <div>
+                                <input type="text" placeholder="搜索...">
+                                <img src="">
+                            </div>
+                        </div>
+                        聊天列表
+                        <div class="chatlist">
+                            同时具有两个类名
+                            <div class="block active">
+                                <div class="imgbx">
+                                    <img src="../img/friendimg.png" class="cover">
+                                </div>
+                                <div class="details">
+                                    <div class="listHead">
+                                        <h4>开心果</h4>
+                                        <p class="time">14:25</p>
+                                    </div>
+                                    <div class="message_p">
+                                        <p>什么时候出去玩？</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> -->
+
+                    <!-- 右边栏 -->
+                    <div class="rightSide">
+                        <div class="header">
+                            <div class="imgText">
+                                <img src="../img/userimg.png"  class="cover">
+                                <h4>开心果<br><span>在线</span></h4>
+                            </div>
+                        </div>
+                        <div class="chat-box">
+                            <div class="chat-message my_message">
+                                <p>你在干嘛呢？<br><span>10:15</span> </p>
+                            </div>
+                            <div class="chat-message frnd_message">
+                                <p>在写作业<br><span>10:15</span> </p>
+                            </div>
+                            <div class="chat-message frnd_message">
+                                <p>天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了<br><span>10:15 </span> </p>
+                            </div>
+                            <div class="chat-message my_message">
+                                <p>对啊 也不下雨<br><span>10:15</span> </p>
+                            </div>
+                            <div class="chat-message my_message">
+                                <p>希望以后凉快点<br><span>10:15</span> </p>
+                            </div>  
+                        </div>
+
+                        <!-- 输入框 -->
+                        <div class="chatbox-input">
+                            <input type="text" id="message-input" placeholder="聊聊感兴趣的"> 
+                            <div>
+                                <button id="submit-btn" >发送</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../script/chat.js"></script>
+    </body>
+</html>
+
