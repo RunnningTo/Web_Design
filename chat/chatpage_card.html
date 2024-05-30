@@ -34,8 +34,6 @@
                     <div class="swiper-main-card swiper-main"></div>
                     <div id="prev-card" class="btn leftBtn"></div>
                     <div id="next-card" class="btn rightBtn"></div>
-                    <!-- <img id="prev-card" class="btn leftBtn" src="../img/left.png" alt="">
-                    <img id="next-card" class="btn rightBtn" src="../img/right.png" alt=""> -->
                 </div>                
                 <div class="swiper-list-card swiper-list" id="friends">
                     <div class="container_intro">
@@ -80,29 +78,53 @@
             let imgArr = [{
                 imgPath: '../img/profile/user1.jpg',
                 name: 'CyberStorm',
-                status: '在线',
+                status: '天气',
                 chat: `
-                        <div class="chat-message my_message">
-                            <p>你在干嘛呢？<br><span>10:15</span> </p>
-                        </div>
-                        <div class="chat-message frnd_message">
-                            <p>在写作业<br><span>10:15</span> </p>
-                        </div>
-                        <div class="chat-message frnd_message">
-                            <p>天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了<br><span>10:15 </span> </p>
-                        </div>
-                        <div class="chat-message my_message">
-                            <p>对啊 也不下雨<br><span>10:15</span> </p>
-                        </div>
-                        <div class="chat-message my_message">
-                            <p>希望以后凉快点<br><span>10:15</span> </p>
-                        </div>
-                    `
+                    <div class="chat-message my_message">
+                        <p>你在干嘛呢？<br><span>10:15</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>在写作业<br><span>10:15</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了天气太热了<br><span>10:15</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>对啊 也不下雨<br><span>10:15</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>希望以后凉快点<br><span>10:15</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>听说下周可能会有阵雨，希望是真的。<br><span>10:16</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>真希望这样，这天气真是受不了。<br><span>10:17</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>你最近有没有去游泳？这种天气去游泳很舒服。<br><span>10:18</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>还没去呢，不过确实应该去游泳降降温。<br><span>10:19</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>有空一起去吧，顺便还能放松一下。<br><span>10:20</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>好啊，约个时间一起去。<br><span>10:21</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>那就定这个周末吧！<br><span>10:22</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>没问题，期待周末见！<br><span>10:23</span> </p>
+                    </div>
+                `
             },
             {
-                imgPath: '../img/profile/user2.jpg',
-                name: 'EternalDreamer',
-                status: '在线',
+                imgPath: '../img/profile/user1.jpg',
+                name: 'CyberStorm',
+                status: '编程',
                 chat: `
                     <div class="chat-message frnd_message">
                         <p>今天学了什么新知识？<br><span>12:30</span> </p>
@@ -121,7 +143,7 @@
             {
                 imgPath: '../img/profile/user3.jpg',
                 name: 'EchoRider',
-                status: '在线',
+                status: '饮食',
                 chat: `
                     <div class="chat-message frnd_message">
                         <p>午饭吃了什么？<br><span>11:20</span> </p>
@@ -140,7 +162,7 @@
             {
                 imgPath: '../img/profile/user4.jpg',
                 name: 'NeonNinja',
-                status: '在线',
+                status: '旅游',
                 chat: `
                     <div class="chat-message frnd_message">
                         <p>有计划去哪里旅游吗？<br><span>16:00</span> </p>
@@ -157,21 +179,45 @@
                 `
             },
             {
-                imgPath: '../img/profile/user5.jpg',
-                name: 'MysticPhoenix',
-                status: '在线',
+                imgPath: '../img/profile/user3.jpg',
+                name: 'EchoRider',
+                status: '乐高',
                 chat: `
                     <div class="chat-message frnd_message">
-                        <p>最近在玩什么新玩具吗？<br><span>18:30</span> </p>
+                        <p>你喜欢拼装哪种类型的乐高？<br><span>18:40</span> </p>
                     </div>
                     <div class="chat-message my_message">
-                        <p>买了一套乐高，正在拼装，很有趣。<br><span>18:32</span> </p>
+                        <p>我喜欢拼装建筑系列的，比如大本钟和埃菲尔铁塔。你呢？<br><span>18:42</span> </p>
                     </div>
                     <div class="chat-message frnd_message">
-                        <p>乐高确实不错，可以花很多时间。<br><span>18:35</span> </p>
+                        <p>我比较喜欢科技系列的，机械和车辆都很酷！<br><span>18:45</span> </p>
                     </div>
                     <div class="chat-message my_message">
-                        <p>是的，很享受拼装的过程。<br><span>18:37</span> </p>
+                        <p>科技系列的也很有趣，拼装起来感觉像在动手做实验。<br><span>18:48</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>是啊，每次完成一个复杂的结构，都会有一种成就感。<br><span>18:50</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>完全同意！有没有想过和朋友一起合作拼装一个大型项目？<br><span>18:53</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>有啊，这样可以分享乐趣，还能增进感情。我们要不要找个时间一起试试？<br><span>18:55</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>好主意！我们可以选一个特别的套装，一起挑战一下。<br><span>18:57</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>那就这么定了！最近有没有特别想拼的套装？<br><span>19:00</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>我一直想试试乐高的哈利波特系列，特别是霍格沃茨城堡！<br><span>19:03</span> </p>
+                    </div>
+                    <div class="chat-message frnd_message">
+                        <p>那太棒了！我也一直想拼那个。找个周末，我们一起开始吧！<br><span>19:05</span> </p>
+                    </div>
+                    <div class="chat-message my_message">
+                        <p>好的，期待和你一起拼装的时光！<br><span>19:07</span> </p>
                     </div>
                 `
             }];

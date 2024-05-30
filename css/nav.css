@@ -65,7 +65,9 @@
 }
 
 .main-wrapper .navigation .nav-content ul li:not(.logo) a {
-    display: block;
+    /* inline-block不会自动换行，不会独占一行，直到填满行 */
+    /* block会撑开父元素自动换行 */
+    display: inline-block;
     text-align: left;
     padding: 15px 20px;
     position: relative

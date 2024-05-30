@@ -67,7 +67,7 @@
 							<div class="header">
 								<div class="imgText">
 									<img src="${resImgArr[index].imgPath}" class="cover">
-									<h4>${resImgArr[index].name}<br><span>${resImgArr[index].status}</span></h4>
+									<h4>${resImgArr[index].status}<br><span>${resImgArr[index].name}</span></h4>
 								</div>
 							</div>
 							<div class="chat-box">
@@ -76,7 +76,7 @@
 							<div class="chatbox-input">
 								<input type="text" class="message-input" placeholder="聊聊感兴趣的"> 
 								<div>
-									<button class="submit-btn" >发送</button>
+									<button class="submit-btn" ><img src="../img/send.png" alt="send"></button>
 								</div>
 							</div>
 						</div>

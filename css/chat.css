@@ -17,6 +17,7 @@ body {
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient */
     /* background: linear-gradient(#009688 0%,#009688 130px,#d9dbd5 130px,#d9dbd5 100%) */
     background-color: #f1f7fe;
+    /* background-color: #c6dbf3; */
 }
 
 .float {
@@ -79,7 +80,8 @@ body {
     position: relative;
     width: 100%;
     height: 60px;
-    background: #ededed;
+    /* background: #ededed; */
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,24 +103,25 @@ body {
 
 /* 定义滚动条的宽度 */
 .chat-box::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
+    cursor: pointer;
 }
 
 /* 设置滚动条轨道的样式 */
 .chat-box::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #fff;
     border-radius: 10px;
 }
 
 /* 自定义滚动条的拇指部分 */
 .chat-box::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #f1f1f1;
     border-radius: 10px;
 }
 
 /* 改变滚动条拇指悬停时的样式 */
 .chat-box::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #aaa;
 }
 
 
@@ -367,20 +370,22 @@ body {
 .chatbox-input
 {
     position: relative;
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     width: 100%;
     margin-top: auto;
-    background: #f0f0f0;
+    /* background: #f0f0f0; */
+    background: #fff;
     padding: 15px 70px;
+    overflow: hidden;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 .chatbox-input input
 {
-    position: relative;
+    /* position: relative;
     flex-grow: 1;
     margin: 0 20px;
     padding: 10px 20px;
@@ -388,18 +393,59 @@ body {
     outline: none;
     border-radius: 30px;
     font-size: 1em;
+    line-height: 60px;
+    box-shadow: 0 0 5px #51a0d0; */
+    width: 90%;
+    line-height: 55px;
+    height: 60px;
+    padding: 10px 20px;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    float: left;
+    font-size: 14px;
+    /* font-size: 30px; */
+    box-shadow: 0 0 5px #51a0d0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .chatbox-input button {
-    position: relative;
+    /* position: relative;
     padding: 5px 10px;
     background-color: #428bca;
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+    display: inline-block;
+    width: 10%;
+    float: left;
+    line-height: 55px;
+    vertical-align: middle;
+    border: 0;
+    background-color: #2f80ec;
+    height: 60px;
+    box-shadow: 0 0 7px #51a0d0;    
+    color: #fff;
+    text-align: center;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.chatbox-input button img {
+    width: 35px;
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+    border-style: none;
 }
 
 .chatbox-input button:hover {
     background-color: #0b4c84;
+}
+
+.chatbox-input input:focus {
+    border: 1px solid rgba(200, 200, 200, 0.8);
 }
