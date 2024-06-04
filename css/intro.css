@@ -16,6 +16,7 @@
 }
 
 .container_intro p {
+    /* text-align: justify; 是 CSS 中的一个属性，用于将文本内容的行两端对齐，使得每一行的左右两边都与包含块的边缘对齐，从而创建一个视觉上更加整洁和专业的布局 */
     text-align: justify;
     line-height: 1.6;
 }

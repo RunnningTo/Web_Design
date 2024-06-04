@@ -29,6 +29,7 @@ function loginAction(user, passwd) {
 
 function addAccount(user, passwd) {
     loadAccount();
+    // 如果已有账户报错
     if(localStorage.hasOwnProperty(user)) {
         openPopup();
     } else {
@@ -38,7 +39,7 @@ function addAccount(user, passwd) {
     }
 }
 
-function refind(user, passwd) {
+function refind(user) {
     loadAccount();
     var para = document.querySelector('#popup p');
     var head = document.querySelector('#popup h2');

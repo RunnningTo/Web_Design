@@ -1,18 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const navBtns = document.querySelectorAll('.nav-content-bttn');
-
-//     navBtns.forEach(navBtn => {
-//         navBtn.addEventListener('click', (event) => {
-//             const clickedNavBtn = event.target;
-//             if(!clickedNavBtn.classList.contains('active')){
-//                 navBtns.forEach(item => {
-//                     item.classList.remove('active');
-//                 });
-//                 clickedNavBtn.classList.add('active');
-//             }
-//         });
-//     });
-// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const navContainer = document.querySelector('.nav-content');

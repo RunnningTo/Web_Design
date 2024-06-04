@@ -26,13 +26,15 @@
 		this.aniTime = obj.aniTime || 500;
 		this.intervalTime = this.aniTime + obj.intervalTime || 2000;
 		this.nowIndex = 3;
+		// 每一个卡片slide
 		this.imgDoms = document.getElementsByClassName('swiper-slide' + obj.clsSuffix);
+		// 整个卡片的轮播条
 		this.mainDom = document.getElementsByClassName('swiper-main' + obj.clsSuffix)[0];
+		// 用户看到的区域
 		this.listDoms = document.getElementsByClassName('swiper-list' + obj.clsSuffix)[0];
 		this.activeDom = this.imgDoms[0];
 		this.autoplay = obj.autoplay;
 
-		// this.listDoms.style.width = `${this.containerWidth}px`;
 		this.listDoms.style.width = 100%
 
 		this.timer; // 自动播放的定时器
@@ -85,11 +87,6 @@
 					<!-- 对话框结束 -->
 					`
 			});
-			// } else if (this.id == 'favorites') {
-			// 	resImgArr.forEach((item, index) => {
-			// 		str += `${resImgArr[index].content}`;
-			// 	});
-			// }
 			
 			this.mainDom.innerHTML = str;
 			this.setScale();
@@ -157,6 +154,7 @@
 				this.mainDom.style.transition = `left ${aniTime/1000}s`
 				this.mainDom.style.left = `${parseInt(this.mainDom.style.left)+(this.gap + this.imgWidth)}px`;
 				if (this.nowIndex === 1) {
+					// 使用了 setTimeout 来延迟执行一些操作
 					this.setScale()
 					setTimeout(function() {
 						this.nowIndex = (this.imgArr.length+1);
@@ -206,7 +204,6 @@
 			document.getElementById('next' + this.clsSuffix).onclick = function () {
 				that.throttle(that.nextSlider, 300, 300);
 			}
-
 
 			document.getElementById('prev' + this.clsSuffix).onmouseover = function () {
 				clearInterval(that.timer);

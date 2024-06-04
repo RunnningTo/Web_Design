@@ -9,3 +9,5 @@ Chat_&amp;_Play_&amp;_Review
 [轮播卡片](https://juejin.cn/post/6844903939159277576?from=search-suggest)
 
 [源码](https://github.com/orangleLi/my-swiper)
+
+[蓝色页面模板](http://demo.sucaihuo.com/modals/65/6567/demo/)

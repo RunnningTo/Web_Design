@@ -80,6 +80,7 @@
     position: relative
 }
 
+/* .main-wrapper 类内部的 .navigation 类内部的 .nav-content 类内部的 <ul> 列表内部的不包含 logo 类的 <li> 列表项的 <a> 链接的内部，且这个子元素具有 circle-icon 类 */
 .main-wrapper .navigation .nav-content ul li:not(.logo) a .circle-icon {
     content: "";
     display: block;
@@ -96,6 +97,7 @@
     flex: 1
 }
 
+/* 是位于 .main-wrapper 类内部的 .navigation 类内部的 .nav-content 类内部的 <ul> 列表内部的 <li> 列表项的直接子元素 <a> 链接，且这个 <a> 链接具有 active 类 */
 .main-wrapper .navigation .nav-content ul li>a.active {
     background-color: #1a73e9;
     border-radius: 7px

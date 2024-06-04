@@ -10,6 +10,18 @@
 
 }
 
+/* [class^="ti-"]: 这个选择器匹配 class 属性值以 "ti-" 开头的所有元素。这通常用于图标字体库中的图标，其中 "ti-" 是图标类名的前缀。
+[class*=" ti-"]: 这个选择器匹配 class 属性值包含 " ti-"（前后有空格）的所有元素。这可以确保即使类名中还有其他类名，只要包含 " ti-" 也会被选中。
+font-family: 'themify';: 这设置字体家族为 'themify'，这是 Themify 图标字体库的名称。
+speak: none;: 这防止语音浏览器读出这些图标，因为它们是视觉元素，不是文本。
+font-style: normal;: 这设置字体风格为正常。
+font-weight: normal;: 这设置字体粗细为正常。
+font-variant: normal;: 这设置字体变体为正常。
+text-transform: none;: 这防止对文本进行任何转换，如大写或小写。
+line-height: 1;: 这设置行高为1，通常用于图标，以避免额外的空间。
+font-size: 14px;: 这设置字体大小为 14 像素。 */
+
+
 [class^="ti-"], [class*=" ti-"] {
 	font-family: 'themify';
 	speak: none;
