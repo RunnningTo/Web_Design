@@ -1,6 +1,10 @@
 # Web_Design
 Chat_&amp;_Play_&amp;_Review
 
+## 示例账户
+> 账号： xyz
+> 密码： 111
+
 ## 功能介绍
 
 ### 1.登陆页面 
@@ -15,7 +19,7 @@ Chat_&amp;_Play_&amp;_Review
 > - 点击聊天卡片的边缘可以进行卡片的轮播
 > - 同时可以发送信息
 > - 同时图片浏览页面也可以进行卡片轮播
-> > - ![image-20240605081211300](./2.png)
+> ![image-20240605081211300](./2.png)
 
 
 ## 参考文档及项目
@@ -29,3 +33,5 @@ Chat_&amp;_Play_&amp;_Review
 [源码](https://github.com/orangleLi/my-swiper)
 
 [蓝色页面模板](http://demo.sucaihuo.com/modals/65/6567/demo/)
+[参考网站](openai.com)
+[参考网站](apple.com)
